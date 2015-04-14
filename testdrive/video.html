@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Don't Postpone Joy</title>
+    </head><body>
+
+
+            <div id="player"></div>
+
+<script src="//www.youtube.com/player_api"></script>
+        <script>
+           /*
+ * YouTube starts
+ * 
+ */
+var player;
+// create youtube player
+function onYouTubePlayerAPIReady() {
+    player = new YT.Player("player",
+            {playerVars: {autoplay: 0, controls: 0, autohide: 0, wmode: "opaque", loop: 0, modestbranding: 0, border: 0, showinfo: 0, hd: 0, html5: 1},
+                videoId: 'k_HdndRWNK8', //vz2rAgXjkCA
+                events: {
+                    /*'onReady': onPlayerReady,*/
+                    'onStateChange': onPlayerStateChange}
+            });
+}
+// autoplay video
+function onPlayerReady(event) {
+    event.target.playVideo();
+}
+// when video ends
+var done = false;
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+        setTimeout(stopVideo, 41500);
+        done = true;
+
+    }
+
+    if (event.data === 0) {
+        $.scrollLock(false);
+        $('#page1').trigger('click');
+    }
+}
+
+function stopVideo() {
+    //player.stopVideo();
+    $.scrollLock(false);
+    player.pauseVideo();
+    $('.navhead').fadeIn(2000);
+    setTimeout(function() {
+        $('#pageentre_joy').trigger('click');
+        /*setTimeout(function() {
+         $.scrollLock(true);
+         }, 2000);*/
+    }, 1000);
+}
+
+        </script>
+    </body>
+</html>

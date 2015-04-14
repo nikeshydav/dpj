@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'atomic_clock_radioregular';
+    src: url(fonts/atomicclockradio.eot);
+    src: url(fonts/atomicclockradio.eot?#iefix) format('embedded-opentype'),
+        url(fonts/atomicclockradio.woff) format('woff'),
+        url(fonts/atomicclockradio.ttf) format('truetype'),
+        url(fonts/atomicclockradio.svg#atomic_clock_radioregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+img {max-width:100%;}
+a {outline:none;}
+.enter_your {margin:0px; padding:0px; }
+.enter_your li {display:inline-block; vertical-align:middle;}
+
+.agebox {width: 68px;height: 68px;border-radius: 70px;text-align: center;font-size: 26px;border: none;color: #999;float: left;outline: none;}
+#intro {height:100vh;}
+#one {height:100vh;}
+#two {height:100vh;}
+#one iframe {height:100%;left:0px;position: absolute;top:0px;width:100%; display:table;} 
+#entre_joy  {height:100vh;}
+.entre_joy {background: url('../images/image-01.jpg');
+            background-size:cover;
+            background-attachment: fixed, fixed;
+            background-position: top left, bottom center;
+            background-repeat: repeat, no-repeat;}
+
+
+
+.customtext {padding:1em ; }
+.bucket {position:relative; top:0px; z-index:0; max-width:497px; text-align:center;}
+.bucket_2 {max-width:497px; margin:0px auto;  }
+.fir_buck_text {position: absolute;z-index: 9;font-size: 28px;top:14%; padding:0 2em;}
+.shere_your_joy {text-align:center; color:#FFF; font-size:12px;}
+.wishboxtext {color:#FFF; font-size:26px; margin:-3em 0 0 0;}
+.wishtext {max-width: 500px; width:450px; border-radius: 13px;font-size: 26px;border: none;color: #999;margin-top: 20px;text-align: center; padding:0.3em 0.5em;text-transform: uppercase;outline: none;}
+
+.bottom_text {font-size:15px; color:#FFF; text-align:center; line-height:22px}
+
+
+
+.main-content{position: relative;width:100%;min-height:768px;padding-left:0;overflow:auto;}
+.navhead{position:fixed;height:100px;width:100%;z-index:999}
+.thinhead li{display:inline;margin-left:60px;line-height:38px;width:100%;}
+.thinhead a{text-decoration:none;font-size:14px;color:#FFF}
+.thinhead{width:100%;height:38px;margin-top:37px;background-image:url(../images/bgtrans.png);background-repeat:repeat;margin-left:0;}
+.headimg{position:absolute;margin-right:50px;right:35px;}
+img.ajax-loader{position: absolute;top: 45%;left: 45%;display: none;}
+
+.logintext {position: absolute;font-size: 12px;margin: -24px;}
+.enter_age {font-size:26px;}
+
+#dynatext {text-transform:uppercase;}
+
+.smallscreen {width:80%; margin:2em auto 0px auto;  text-align:center;}
+.smallscreen li {display:inline-block; text-align:center; margin:0.3em 2em; vertical-align:middle;}
+.countdown {text-align:center;}
+
+
+.enter_your_joy {margin:0px; padding:0px; text-align:center !important;}
+.enter_your_joy li {display:inline-block;}
+
+
+
+.headimg{position:absolute;margin-right:50px;right:35px;display:block;z-index:1000;width:215px;height:107px;}
+#dl-menu{display: none;top: 2em;position: absolute;}
+.dl-menuwrapper button {background:none;border: none;width: 48px;height: 45px;text-indent: -900em;overflow: hidden;position: relative;cursor: pointer;outline: none;}
+.dl-menuwrapper .dl-menu {margin: -12px 0 0 0;position: absolute;width:250px;display:none;-webkit-transform: translateY(10px);transform: translateY(10px);-webkit-backface-visibility: hidden;backface-visibility: hidden; background:#000; padding:1em;}
+.dl-menuwrapper button:after {content: '';position: absolute;width: 68%;height: 5px;background: #FFF;top: 10px;left: 16%;box-shadow: 0 10px 0 #FFF, 0 20px 0 #FFF;}
+.profileimg{width: 100px;height: 100px;margin: 0 0 .3em 0;}
+#pageentre_joy{z-index: 999}
+#player1{position: absolute;z-index: 9999;width: 100%;height: 100%;top: 0;}
+
+.dl-menuopen li {border-bottom:1px solid #666; padding:0.5em 0}
+.dl-menuopen li:last-child {border:none;}
+.dl-menuopen li a  {font-size:14px; color:#fff; text-decoration:none; }
+
+
+.twitter {margin:2em auto;background: #FFF;width: 544px;padding: 1em 2.2em}
+
+
+
+.hidecontrol{width:100%;height:115px;background:#000;background-repeat:repeat;position:absolute;z-index:20;bottom:50px;}
+.vidsec{font-size:26px;color:#FFF;}
+.agenum{font-family:'atomic_clock_radioregular';font-size:3em;color:#FFF;}
+.timertext{color:#FFF;font-size:16px;text-align:center;letter-spacing:1px;}
+.countdown{opacity: 0.8;bottom: 100px;left: 50%; text-align:center; }
+.smalltimer{font-size:2em;font-family:'atomic_clock_radioregular';text-align:center;line-height:50px;color:#FFF;margin-top:10px;}
+
+#replay {display:none;}
+
+.bird {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    left: 44%;
+    top: 50px;
+    cursor: pointer;
+}
+
+.join {
+    font-size: 20px;
+    color: #2c2c2c;
+    text-align: center;
+    padding:0px 0 0 0;
+}
+
+label:after {display:none !important;}
+label:before {display:none !important;}
+
+
+.form-div {background: url(../images/bg_form.jpg) no-repeat fixed #000; background-size:cover;}
+#full-screen-background-image {z-index: -999;min-height: 100%;min-width: 1024px;width: 100%;height: auto;position: fixed;top: 0;left: 0;}
+
+
+.subhead {margin-top:35%;}
+.tnc {position:relative;}  
+#tnc {font-size:11px;color:#FFF;}  
+.terms{position:absolute;top:85px;left:20%;width:266px;border-color:black;border-width:1;border-style:solid;background-color:white;padding:0;display:none}
+
+#state_block,#car_block{display:block;height:15px}
+#state_block label,#car_block label{display:block;float:left; line-height:normal;}
+.terms{position:absolute;top:185px;left:25%;width:266px;border-color:black;border-width:1;border-style:solid;background-color:white;padding:0;display:none;font-size:11px}  
+.copy {line-height:normal; padding:1em} 
+
+
+
+#form-div{
+background-attachment: fixed, fixed;
+background-position: top left, bottom center;
+background-repeat: repeat, no-repeat;
+overflow: hidden;}
+
+::-webkit-input-placeholder{color:#000;}
+::-moz-placeholder{color:#000;}
+
+.bighead {width: 80%;margin: 0 auto;font-size: 2em;color: #FFF;margin-top: 130px;text-align: center;line-height: 1em; padding: 1em 0 0 0;}
+.subhead {text-align: center;color: #FFF;font-size: 1em;line-height: 1.3em;width: 80%;margin: 0 auto;}
+.field {border-radius: 5px;border: none;padding:0.3em 0.55em !important;font-size: 12px;color: #000;}
+.submit {border-radius: 5px;border: none;padding:0.3em 1em !important;font-size: 14px;color: #000; background:#FFF; cursor:pointer; }
+
+.form {margin:2em auto; max-width:630px; }
+.form_outer {margin:0.5em auto;max-width: 825px;}
+.form_outer li {padding:0em !important; margin:0.3em 0px !important; display:inline-block; } 
+
+.title {width:50px !important;margin:1em 1em 0 0}
+.field {width:300px !important;margin:1em 1em 0 0}
+.fname {width:237px !important;margin:1em 1em 0 0}
+.selectbox {width:300px; margin:1em 1em 0 0}
+
+#cars {width:300px;display:inline-block; margin:1em 1em 0 0 }
+#cars1 {width:300px; display:inline-block;margin:0.5em 0 0.5em 0.7em !important }
+
+
+
+
+
+select, input {margin:0.5em 0.3em !important;}
+
+
+
+
+
+
+.selectbox {font-size:12px; color:#a2a3a3; background:url(../images/drop_arrow.png) no-repeat 95% 10px #FFF; /*margin:0 1em 0.2em 0*/}
+.drilldown-2 { background:url(../images/drop_arrow.png) no-repeat 95% 10px #FFF; margin-left:0.5em;}
+.drilldown-1  {background:url(../images/drop_arrow.png) no-repeat 95% 10px #FFF;}
+.carss { display:inline-block;}
+
+.error {background:#FFF !important; border: 1px solid #E42323 !important;color: #FFF;color: #F00;}
+input[type=checkbox].error {outline:1px solid #FF0000}
+
+
+
+
+
+
+label {display:none !important;}
+
+/* The CSS */
+select {
+margin: 0;
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius:10px;
+background: #f8f8f8;
+color:#efefef;
+border:none;
+outline:none;
+display: inline-block;
+-webkit-appearance:none;
+-moz-appearance:none;
+appearance:none;
+cursor:pointer;
+padding: .3em 1em;
+}
+
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {}
+
+label {position:relative; font-size:12px;}
+label:after {
+content:'<>';
+font:11px "Consolas", monospace;
+color:#aaa;
+-webkit-transform:rotate(90deg);
+-moz-transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+transform:rotate(90deg);
+right:8px; top:2px;
+padding:0 0 2px;
+border-bottom:1px solid #ddd;
+position:absolute;
+pointer-events:none;}}
+
+
+@media only screen and (max-height : 900px) {  
+.main.style2 .content{width: 31% !important}
+}
+label:before {
+content:'';
+right:6px; top:0px;
+width:20px; height:20px;
+background:#f8f8f8;
+position:absolute;
+pointer-events:none;
+display:block;}
+.bighead {font-size: 1.5em; text-transform:uppercase;}
+.subhead {font-size: 0.7em; margin:0.5em auto;}
+
+
+@media only screen and (max-width: 768px){ 
+.headimg{right:1em;margin: 0}
+.mymenu{display: none}
+#dl-menu{display:block;}
+.enter_your li  {margin:1.5em 0;}
+.enter_your li:first-child  { width:100%;text-align:center; }
+.logintext {margin:-20px 0px 0px -20px !important}
+.dl-menuopen{display: block !important}
+.wishtext {width:100% !important; max-width:100% !important}
+.profileimg {width: 2em;height: 2em;margin: 1em 0 .3em 0;}
+.twitter {width: 100%;padding: 0}
+.bird{top: 1em;}
+
+.drilldown-2 {
+width: 300px;
+margin:0.5em 0em !important;
+}
+
+.form {
+margin: 2em auto !important;
+max-width: 310px !important;
+}
+
+#cars1 {
+width: 300px;
+display: inline-block;
+margin: 1em 0 0 0.3em !important;}
+
+
+
+
+
+.main.style2 .content {width: 78% !important;}
+.profileimg {margin: 0em 0 .3em 0;}
+
+}
+
+@media only screen and (max-width: 480px){ 
+.logintext {margin:-0px 0px 0px -20px !important}
+.vidsec {font-size:16px;}
+.smallscreen li {margin: 0.3em 0em}
+.enter_your li:first-child  { width:100%; }
+.agenum {font-size:2em;}
+.fir_buck_text { position: absolute;z-index: 9;font-size: 18px;top: 2%;padding: 0 2em;}
+.headimg {width:150px;}
+.wishtext {width:100% !important; max-width:100% !important}
+
+.drilldown-2 {
+width: 300px;
+margin:0.5em 0em !important;
+}
+
+.enter_your li {margin: 0.5em 0;display: inline;}
+.form_outer {max-width:320px !important; margin:0px auto}
+
+
+}
+
+

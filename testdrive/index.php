@@ -1,0 +1,515 @@
+<?php
+session_start();
+
+if (isset($_REQUEST['lead'])) {
+    $_SESSION['lead'] = $_REQUEST['lead'];
+}
+?><!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Don't Postpone Joy</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta property="og:url" content="http://www.dontpostponejoy.in" />
+        <meta property="og:title" content="Don't Postpone Joy" />
+        <meta property="og:description" content="I have decided not to Postpone Joy in my life. Joy brings more joy and the time to achieve it is NOW with @BMWIndia" />
+        <meta property="og:image" content="http://dontpostponejoy.in/images/big-bucket-01.jpg" />
+        <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/jquery.min.js"></script>
+        <script src="//www.code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="js/jquery.poptrox.min.js"></script>
+        <script src="js/jquery.scrolly.min.js"></script>
+        <script src="js/jquery.scrollgress.min.js"></script>
+        <script src="js/skel.min.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/jquery.scrollLock.js"></script>
+        <script src="//www.youtube.com/player_api"></script>
+        <script src="js/jquery.fitvids.js"></script>
+        <script src="js/jquery.dlmenu.js"></script>
+        <script src="js/modernizr.custom.js"></script>
+        <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js" ></script>
+        <script src="//jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+        <script src="js/jquery.form.min.js" ></script>
+        <script>
+
+            $(function () {
+
+                $('#bmw_mobile1').keyup(function () {
+                    $(this).val(function (index, oldVal) {
+                        return oldVal.replace(/[^\d]/g, '');
+                    });
+                });
+
+                $('.textonly').keyup(function () {
+                    $(this).val(function (index, oldVal) {
+                        return oldVal.replace(/[^[a-zA-Z ]*$/, '');
+                    });
+                });
+
+
+                $('#tnc').click(function () {
+                    $('#terms').show();
+                });
+
+                $('#clog').click(function () {
+                    $('#terms').hide();
+                });
+                $("#commentForm1").validate({
+                    rules: {
+                        bmw_mobile1: {
+                            required: true,
+                            minlength: 10
+                        }
+                    },
+                    submitHandler: function () {
+
+                        $('.bighead').text("Thank you for your interest in BMW.");
+                        $('.subhead').text("Your request has been submitted. We will contact you at the earliest.");
+                        $('.form').hide();
+
+                        $('#commentForm1').ajaxSubmit(function (d) {
+                            //$('#form-div').html('<div class="subhead">Thanks for submitting. We will get back you soon.</div>');
+                        });
+                    }
+                });
+
+            });
+        </script>
+        <script src="js/jquery.select-hierarchy.js" ></script>
+        <script src="js/app.js"></script>
+        <noscript>
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/component.css" />
+        <link rel="stylesheet" href="css/default.css" />
+        <link rel="stylesheet" href="css/style-wide.css" />
+        <link rel="stylesheet" href="css/style-normal.css" />
+        </noscript>
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    </head><body class="form-div">
+        <div class="navhead">
+            <div class="headimg"><img src="images/logo.png"></div>
+            <!--mobiledropdown-->
+            <div class="container demo-1">
+                <div class="column">
+                    <div id="dl-menu" class="dl-menuwrapper">
+                        <button class="dl-trigger">Open Menu</button>
+                        <ul class="dl-menu">
+                            <li> <a href="/">HOME</a> </li>
+                            <li> <a href="http://www.bmw.in" target="_blank">BMW.IN</a> </li>
+                            <li><a href="http://www.bmw.in/in/en/general/ecom_uic/dlo/dealer_locator.html" target="_blank">SELECT YOUR DEALER</a></li>
+                            <li> <a href="/testdrive/">BOOK A TEST DRIVE</a> </li>
+                        </ul>
+                    </div>
+                    <!-- /dl-menuwrapper -->
+                </div>
+            </div>
+            <!-- /container -->
+            <!--mobileropdown-->
+            <div class="thinhead">
+                <ul class="mymenu">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="http://www.bmw.in" target="_blank">BMW.IN</a></li>
+                    <li><a href="http://www.bmw.in/in/en/general/ecom_uic/dlo/dealer_locator.html" target="_blank">SELECT YOUR DEALER</a></li>
+                    <li> <a href="/testdrive/">BOOK A TEST DRIVE</a> </li>
+                </ul>
+            </div>
+        </div>
+        <section id="form-div">
+            <form action="http://teambmw.in/dontpostponejoy/Default.aspx" target="my_iframe" method="post" id="commentForm1" >
+                <div>
+                    <div class="bighead">DON’T POSTPONE JOY.</div>
+                    <div class="subhead">FILL IN YOUR DETAILS AND EXPERIENCE THE JOY OF DRIVING A BMW AT THE EARLIEST.
+                        <p style="font-size:12px;">(All fields are mandatory)</p>
+                    </div>
+                    <div class="form">
+                        <ul class="form_outer">
+                            <li>
+                                <select  class="selectbox title" required name="bmw_salutation">
+                                    <option value="" selected >Title* </option>
+                                    <option value="2CE544DC-B748-E111-B8E1-005056820025">DR.</option>
+                                    <option value="2EE544DC-B748-E111-B8E1-005056820025">MR.</option>
+                                    <option value="30E544DC-B748-E111-B8E1-005056820025">MRS.</option>
+                                    <option value="32E544DC-B748-E111-B8E1-005056820025">MS.</option>
+                                </select>
+                            </li>
+                            <li>
+                                <input type="text" name="bmw_firstname" class="field fname textonly" placeholder="First Name*" required>
+                            </li>
+                            <li>
+                                <input type="text" name="bmw_lastname" class="field textonly" placeholder="Last Name*" required>
+                            </li>
+                            <li id="dropbox">
+                                <select name="slist" id="car" class="selectbox"  required>
+                                    <option value="" selected >Existing Car Brand*</option>
+                                    <option value="Aston Martin">Aston Martin</option>
+                                    <option value="DB9">Aston Martin &gt; DB9</option>
+                                    <option value="Rapide">Aston Martin &gt; Rapide</option>
+                                    <option value="Vanquish">Aston Martin &gt; Vanquish</option>
+                                    <option value="Vantage">Aston Martin &gt; Vantage</option>
+                                    <option value="Zagato">Aston Martin &gt; Zagato</option>
+                                    <option value="Audi">Audi</option>
+                                    <option value="A2">Audi &gt; A2</option>
+                                    <option value="A4">Audi &gt; A4</option>
+                                    <option value="A5">Audi &gt; A5</option>
+                                    <option value="A6">Audi &gt; A6</option>
+                                    <option value="A7">Audi &gt; A7</option>
+                                    <option value="A8">Audi &gt; A8</option>
+                                    <option value="Q2">Audi &gt; Q2</option>
+                                    <option value="Q3">Audi &gt; Q3</option>
+                                    <option value="Q5">Audi &gt; Q5</option>
+                                    <option value="Q6">Audi &gt; Q6</option>
+                                    <option value="Q7">Audi &gt; Q7</option>
+                                    <option value="R8">Audi &gt; R8</option>
+                                    <option value="RS5">Audi &gt; RS5</option>
+                                    <option value="RS6">Audi &gt; RS6</option>
+                                    <option value="RS7">Audi &gt; RS7</option>
+                                    <option value="S4">Audi &gt; S4</option>
+                                    <option value="S5">Audi &gt; S5</option>
+                                    <option value="S6">Audi &gt; S6</option>
+                                    <option value="TT">Audi &gt; TT</option>
+                                    <option value="Bugatti">Bugatti</option>
+                                    <option value="Veyron">Bugatti &gt; Veyron</option>
+                                    <option value="Bentley">Bentley</option>
+                                    <option value="Continental">Bentley &gt; Continental</option>
+                                    <option value="Mulsanne">Bentley &gt; Mulsanne</option>
+                                    <option value="Rose">Bentley &gt; Rose</option>
+                                    <option value="Flying Spur">Bentley &gt; Flying Spur</option>
+                                    <option value="BMW">BMW </option>
+                                    <option value="3 Series">BMW &gt; 3 Series</option>
+                                    <option value="5 Series">BMW &gt; 5 Series</option>
+                                    <option value="6 Series">BMW &gt; 6 Series</option>
+                                    <option value="7 Series">BMW &gt; 7 Series</option>
+                                    <option value="Grand Turismo(GT">BMW &gt; Grand Turismo(GT)</option>
+                                    <option value="M series">BMW &gt; M series</option>
+                                    <option value="X1">BMW &gt; X1</option>
+                                    <option value="X3">BMW &gt; X3</option>
+                                    <option value="X5">BMW &gt; X5</option>
+                                    <option value="X6">BMW &gt; X6</option>
+                                    <option value="Z4">BMW &gt; Z4</option>
+                                    <option value="Chevrolet">Chevrolet</option>
+                                    <option value="Beat">Chevrolet &gt; Beat</option>
+                                    <option value="Captiva">Chevrolet &gt; Captiva</option>
+                                    <option value="Cruize">Chevrolet &gt; Cruize</option>
+                                    <option value="Enjoy">Chevrolet &gt; Enjoy</option>
+                                    <option value="Sail">Chevrolet &gt; Sail</option>
+                                    <option value="Spark">Chevrolet &gt; Spark</option>
+                                    <option value="Tavera">Chevrolet &gt; Tavera</option>
+                                    <option value="Ferrari">Ferrari</option>
+                                    <option value="458 Itallia">Ferrari &gt; 458 Itallia</option>
+                                    <option value="458 Spider">Ferrari &gt; 458 Spider</option>
+                                    <option value="California">Ferrari &gt; California</option>
+                                    <option value="F12 Berlinita">Ferrari &gt; F12 Berlinita</option>
+                                    <option value="FF">Ferrari &gt; FF</option>
+                                    <option value="Ford">Ford</option>
+                                    <option value="Classic">Ford &gt; Classic</option>
+                                    <option value="EcoSport">Ford &gt; EcoSport</option>
+                                    <option value="Endeavour">Ford &gt; Endeavour</option>
+                                    <option value="Fiesta">Ford &gt; Fiesta</option>
+                                    <option value="Figo">Ford &gt; Figo</option>
+                                    <option value="Force Motors">Force Motors</option>
+                                    <option value="Force One">Force Motors &gt; Force One</option>
+                                    <option value="Gurkha">Force Motors &gt; Gurkha</option>
+                                    <option value="Fiat">Fiat </option>
+                                    <option value="Punto">Fiat &gt; Punto</option>
+                                    <option value="Linea">Fiat &gt; Linea</option>
+                                    <option value="Honda">Honda </option>
+                                    <option value="Amaze">Honda &gt; Amaze</option>
+                                    <option value="Brio">Honda &gt; Brio</option>
+                                    <option value="City">Honda &gt; City</option>
+                                    <option value="Civic">Honda &gt; Civic</option>
+                                    <option value="CRV">Honda &gt; CRV</option>
+                                    <option value="Accord">Honda &gt; Accord</option>
+                                    <option value="Hyundai">Hyundai </option>
+                                    <option value="Accent">Hyundai &gt; Accent</option>
+                                    <option value="Elantra">Hyundai &gt; Elantra</option>
+                                    <option value="Eon">Hyundai &gt; Eon</option>
+                                    <option value="Verna">Hyundai &gt; Verna</option>
+                                    <option value="Santro Xing">Hyundai &gt; Santro Xing</option>
+                                    <option value="i10">Hyundai &gt; i10</option>
+                                    <option value="i20">Hyundai &gt; i20</option>
+                                    <option value="Santa Fe">Hyundai &gt; Santa Fe</option>
+                                    <option value="Sonata">Hyundai &gt; Sonata</option>
+                                    <option value="Jaguar">Jaguar </option>
+                                    <option value="F-Type">Jaguar &gt; F-Type</option>
+                                    <option value="XF">Jaguar &gt; XF</option>
+                                    <option value="XJ">Jaguar &gt; XJ</option>
+                                    <option value="XK">Jaguar &gt; XK</option>
+                                    <option value="XZ">Jaguar &gt; XZ</option>
+                                    <option value="Jeep">Jeep </option>
+                                    <option value="Grand Chreokee">Jeep &gt; Grand Chreokee</option>
+                                    <option value="Wrangler">Jeep &gt; Wrangler</option>
+                                    <option value="Lamborghini">Lamborghini </option>
+                                    <option value="Aventador">Lamborghini &gt; Aventador</option>
+                                    <option value="Gallardo">Lamborghini &gt; Gallardo</option>
+                                    <option value="Venno">Lamborghini &gt; Venno</option>
+                                    <option value="Land Rover">Land Rover </option>
+                                    <option value="Discovery 4">Land Rover &gt; Discovery 4</option>
+                                    <option value="Freelander 2">Land Rover &gt; Freelander 2</option>
+                                    <option value="Range Rover">Land Rover &gt; Range Rover</option>
+                                    <option value="Range Rover Sport">Land Rover &gt; Range Rover Sport</option>
+                                    <option value="Range Rover Evoque">Land Rover &gt; Range Rover Evoque</option>
+                                    <option value="Lexus">Lexus </option>
+                                    <option value="ES">Lexus &gt; ES</option>
+                                    <option value="GS">Lexus &gt; GS</option>
+                                    <option value="GX">Lexus &gt; GX</option>
+                                    <option value="IS">Lexus &gt; IS</option>
+                                    <option value="LX">Lexus &gt; LX</option>
+                                    <option value="Mahindra">Mahindra </option>
+                                    <option value="Bollero">Mahindra &gt; Bollero</option>
+                                    <option value="E2O">Mahindra &gt; E2O</option>
+                                    <option value="Quanto">Mahindra &gt; Quanto</option>
+                                    <option value="Scorpio">Mahindra &gt; Scorpio</option>
+                                    <option value="Thar">Mahindra &gt; Thar</option>
+                                    <option value="Verito">Mahindra &gt; Verito</option>
+                                    <option value="XUV500">Mahindra &gt; XUV500</option>
+                                    <option value="Xylo">Mahindra &gt; Xylo</option>
+                                    <option value="Maruti Suzuki">Maruti Suzuki</option>
+                                    <option value="800">Maruti Suzuki &gt; 800</option>
+                                    <option value="A Star">Maruti Suzuki &gt; A Star</option>
+                                    <option value="Alto 800">Maruti Suzuki &gt; Alto 800</option>
+                                    <option value="Alto K10">Maruti Suzuki &gt; Alto K10</option>
+                                    <option value="Eeco">Maruti Suzuki &gt; Eeco</option>
+                                    <option value="Ertiga">Maruti Suzuki &gt; Ertiga</option>
+                                    <option value="Estilo">Maruti Suzuki &gt; Estilo</option>
+                                    <option value="Grand Vitara">Maruti Suzuki &gt; Grand Vitara</option>
+                                    <option value="Gypsy">Maruti Suzuki &gt; Gypsy</option>
+                                    <option value="Kizashi">Maruti Suzuki &gt; Kizashi</option>
+                                    <option value="Omni">Maruti Suzuki &gt; Omni</option>
+                                    <option value="Ritz">Maruti Suzuki &gt; Ritz</option>
+                                    <option value="Swift Dzire">Maruti Suzuki &gt; Swift Dzire</option>
+                                    <option value="Swift">Maruti Suzuki &gt; Swift</option>
+                                    <option value="SX4">Maruti Suzuki &gt; SX4</option>
+                                    <option value="WagonR">Maruti Suzuki &gt; WagonR</option>
+                                    <option value="Zen">Maruti Suzuki  &gt; Zen</option>
+                                    <option value="Masareti">Masareti</option>
+                                    <option value="Grand Cabrio">Masareti &gt; Grand Cabrio</option>
+                                    <option value="Grand Turismo">Masareti &gt; Grand Turismo</option>
+                                    <option value="Ghibil">Masareti &gt; Ghibil</option>
+                                    <option value="Quattro Porte">Masareti &gt; Quattro Porte</option>
+                                    <option value="Mercedez Benz">Mercedez Benz </option>
+                                    <option value="A Class">Mercedez Benz &gt; A Class</option>
+                                    <option value="B Class">Mercedez Benz &gt; B Class</option>
+                                    <option value="CLS">Mercedez Benz &gt; CLS</option>
+                                    <option value="E Class">Mercedez Benz &gt; E Class</option>
+                                    <option value="G Class">Mercedez Benz &gt; G Class</option>
+                                    <option value="GL">Mercedez Benz &gt; GL</option>
+                                    <option value="M Class">Mercedez Benz &gt; M Class</option>
+                                    <option value="C Class">Mercedez Benz &gt; C Class</option>
+                                    <option value="R Class">Mercedez Benz &gt; R Class</option>
+                                    <option value="S Class">Mercedez Benz &gt; S Class</option>
+                                    <option value="SL">Mercedez Benz &gt; SL</option>
+                                    <option value="SLK Class">Mercedez Benz &gt; SLK Class</option>
+                                    <option value="SLS">Mercedez Benz &gt; SLS</option>
+                                    <option value="Mitsubishi">Mitsubishi </option>
+                                    <option value="Cedia">Mitsubishi &gt; Cedia</option>
+                                    <option value="Lancer">Mitsubishi &gt; Lancer</option>
+                                    <option value="Montero">Mitsubishi &gt; Montero</option>
+                                    <option value="Outlander">Mitsubishi &gt; Outlander</option>
+                                    <option value="Pajero Sport">Mitsubishi &gt; Pajero Sport</option>
+                                    <option value="Nissan">Nissan</option>
+                                    <option value="370 Z">Nissan &gt; 370 Z</option>
+                                    <option value="Evalia">Nissan &gt; Evalia</option>
+                                    <option value="Micra">Nissan &gt; Micra</option>
+                                    <option value="Sunny">Nissan &gt; Sunny</option>
+                                    <option value="Teana">Nissan &gt; Teana</option>
+                                    <option value="X-trail">Nissan &gt; X-trail</option>
+                                    <option value="GTR">Nissan &gt; GTR</option>
+                                    <option value="Porche">Porche </option>
+                                    <option value="911">Porche &gt; 911</option>
+                                    <option value="Boxster">Porche &gt; Boxster</option>
+                                    <option value="Cayenne">Porche &gt; Cayenne</option>
+                                    <option value="Caymen">Porche &gt; Caymen</option>
+                                    <option value="Panamera<">Porche &gt; Panamera</option>
+                                    <option value="Renault">Renault &gt; Duster</option>
+                                    <option value="Duster">Renault &gt; Duster</option>
+                                    <option value="Fluence">Renault &gt; Fluence</option>
+                                    <option value="Koleos">Renault &gt; Koleos</option>
+                                    <option value="Pulse">Renault &gt; Pulse</option>
+                                    <option value="Scala">Renault &gt; Scala</option>
+                                    <option value="Clio">Renault &gt; Clio</option>
+                                    <option value="Dokker">Renault &gt; Dokker</option>
+                                    <option value="Labuna">Renault &gt; Labuna</option>
+                                    <option value="Scenic">Renault &gt; Scenic</option>
+                                    <option value="Rolls Royce">Rolls Royce</option>
+                                    <option value="Ghost">Rolls Royce &gt; Ghost</option>
+                                    <option value="Phantom">Rolls Royce &gt; Phantom</option>
+                                    <option value="Phantom Coupe">Rolls Royce &gt; Phantom Coupe</option>
+                                    <option value="Phatom Dropdead Coupe">Rolls Royce &gt; Phatom Dropdead Coupe</option>
+                                    <option value="Skoda">Skoda</option>
+                                    <option value="Fabia">Skoda &gt; Fabia</option>
+                                    <option value="Laura">Skoda &gt; Laura</option>
+                                    <option value="Rapid">Skoda &gt; Rapid</option>
+                                    <option value="Superb">Skoda &gt; Superb</option>
+                                    <option value="Yeti">Skoda &gt; Yeti</option>
+                                    <option value="Ssangyong">Ssangyong</option>
+                                    <option value="Rexton">Ssangyong &gt; Rexton</option>
+                                    <option value="Tata">Tata </option>
+                                    <option value="Aria">Tata &gt; Aria</option>
+                                    <option value="Indica V2">Tata &gt; Indica V2</option>
+                                    <option value="Indica eV2">Tata &gt; Indica eV2</option>
+                                    <option value="Indica Vista">Tata &gt; Indica Vista</option>
+                                    <option value="Indica eCS">Tata &gt; Indica eCS</option>
+                                    <option value="Manza">Tata &gt; Manza</option>
+                                    <option value="Nano">Tata &gt; Nano</option>
+                                    <option value="Safari">Tata &gt; Safari</option>
+                                    <option value="Safari Storme">Tata &gt; Safari Storme</option>
+                                    <option value="Sumo">Tata &gt; Sumo</option>
+                                    <option value="Sumo Grande">Tata &gt; Sumo Grande</option>
+                                    <option value="Venture">Tata &gt; Venture</option>
+                                    <option value="Winger">Tata &gt; Winger</option>
+                                    <option value="Xenon XT">Tata &gt; Xenon XT</option>
+                                    <option value="Toyota">Toyota</option>
+                                    <option value="Camry">Toyota &gt; Camry</option>
+                                    <option value="Corolla Altis">Toyota &gt; Corolla Altis</option>
+                                    <option value="Etios">Toyota &gt; Etios</option>
+                                    <option value="Etios Liva">Toyota &gt; Etios Liva</option>
+                                    <option value="Fortuner">Toyota &gt; Fortuner</option>
+                                    <option value="Innova">Toyota &gt; Innova</option>
+                                    <option value="Land Cruiser">Toyota &gt; Land Cruiser </option>
+                                    <option value="Land Cruiser Prado">Toyota &gt; Land Cruiser Prado</option>
+                                    <option value="Prius">Toyota &gt; Prius</option>
+                                    <option value="Volkswagen">Volkswagen</option>
+                                    <option value="Bettle">Volkswagen &gt; Bettle</option>
+                                    <option value="Jetta">Volkswagen &gt; Jetta</option>
+                                    <option value="Passat">Volkswagen &gt; Passat</option>
+                                    <option value="Phaeton">Volkswagen &gt; Phaeton</option>
+                                    <option value="Polo">Volkswagen &gt; Polo</option>
+                                    <option value="Vento">Volkswagen &gt; Vento</option>
+                                    <option value="Cross Polo">Volkswagen &gt; Cross Polo</option>
+                                    <option value="Touareg">Volkswagen &gt; Touareg</option>
+                                    <option value="Golf">Volkswagen &gt; Golf</option>
+                                    <option value="XL1">Volkswagen &gt; XL1</option>
+                                    <option value="Volvo">Volvo</option>
+                                    <option value="S 80">Volvo &gt; S 80</option>
+                                    <option value="S 60">Volvo &gt; S 60</option>
+                                    <option value="S 90">Volvo &gt; S 90</option>
+                                    <option value="C 30">Volvo &gt; C 30</option>
+                                    <option value="C 70">Volvo &gt; C 70</option>
+                                    <option value="XC 90">Volvo &gt; XC 90</option>
+                                    <option value="XC 60">Volvo &gt; XC 60</option>
+                                    <option value="XC 30">Volvo &gt; XC 30</option>
+                                    <option value="XC 40">Volvo &gt; XC 40</option>
+                                    <option value="V 40">Volvo &gt; V 40</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select  class="selectbox" name="bmw_yearofpurchase" required>
+                                    <option value="" selected >Year of Purchase*</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1999">1999</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select name="bmw_seriesid" class="selectbox" required>
+                                    <option value="" disabled selected>My Preferred BMW Model*</option>
+                                    <option value="2A5DB9FE-F4DF-E211-8672-005056820025">1 Series</option>
+                                    <option value="29027CC5-564D-E111-957C-005056820025">3 Series</option>
+                                    <option value="2B027CC5-564D-E111-957C-005056820025">5 Series</option>
+                                    <option value="2D027CC5-564D-E111-957C-005056820025">6 Series</option>
+                                    <option value="2F027CC5-564D-E111-957C-005056820025">7 Series</option>
+                                    <option value="31027CC5-564D-E111-957C-005056820025">Gran Turismo</option>
+                                    <option value="33027CC5-564D-E111-957C-005056820025">M</option>
+                                    <option value="35027CC5-564D-E111-957C-005056820025">X1</option>
+                                    <option value="37027CC5-564D-E111-957C-005056820025">X3</option>
+                                    <option value="39027CC5-564D-E111-957C-005056820025">X5</option>
+                                    <option value="3B027CC5-564D-E111-957C-005056820025">X6</option>
+                                    <option value="3D027CC5-564D-E111-957C-005056820025">Z4</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select name="bmw_purchaseintentionid"  class="selectbox" required>
+                                    <option value="174640003" disabled selected>Purchase Intention*</option>
+                                    <option value="174640004">Within 1 month</option>
+                                    <option value="174640000">Within 3 months</option>
+                                    <option value="174640001">3-6 months</option>
+                                    <option value="174640002">6-12 months</option>
+                                    <option value="174640003">Later than 1 year</option>
+                                </select>
+                            </li>
+                            <li>
+                                <input type="tel" id="bmw_mobile1" maxlength="10" name="bmw_mobile1" class="field" placeholder="Mobile No.*" required />
+                            </li>
+                            <li>
+                                <input type="email" name="bmw_email" class="field" placeholder="Email ID*" required>
+                            </li>
+                        </ul>
+                        <div class="form_outer">
+                            <input id="dataUsageAgreement" name="dataUsageAgreement" type="checkbox" value="true" required aria-required="true" />
+                            <div style="color: #FFF;font-size: 12px; display:inline;">Accept the data usage agreement.*<a href="#" id="tnc"> Terms of use</a>
+                                <div id="terms" class="terms" >
+                                    <div style="position: absolute; left: 245px; top: 5px;"> <a href="#" id="clog">X</a> </div>
+                                    <div  class="copy" style="color: #000;">
+                                        <div class="headline2">For Your Information.</div>
+                                        By providing the aforesaid information, you hereby unconditionally consent to being contacted by BMW India Financial Services Private Limited and/or any of its group companies and/or their employees/agents (hereinafter collectively referred to as "BMW") either through phone, SMS, written communication, email or any other legal means, from time to time. Further, this information shall be treated as your free consent and authorization to BMW to establish contract. You agree and confirm that submission of the information shall override the effect of any subscription made by you, either in the past or in the future, with the applicable National Do Not Call (NDNC) registries. Please note that you can retract your consent at any time by accessing our unsubscribe form. In this regard you acknowledge that processing of such a request may take upto ten business days. BMW ensures that all personal data will be dealt with in accordance with privacy protection regulations.
+                                    </div>
+                                </div><br>
+                                <input class="submit" type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="bmw_leadsource" value="<?php echo $_SESSION['lead'] ?>" >
+                    <?php
+                    $pos = strpos($_SESSION['lead'], "emailer");
+                    if ($pos === false) {
+                        ?>
+                        <input type="hidden" name="bmw_subsource" value="174640022" >
+                    <?php } else { /* This  will execute when leadsource has emailer and will send sub source as emailer */ ?>
+                        <input type="hidden" name="bmw_subsource" value="174640030" >
+                    <?php } ?>
+                    </form>
+                    </section>
+                    <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-54754167-1', 'auto');
+            ga('send', 'pageview');
+
+                    </script>
+                    <iframe name="my_iframe" style="height:1px;width:1px"></iframe>
+
+                    </body>
+                    </html>

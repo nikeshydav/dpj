@@ -1,0 +1,76 @@
+
+@font-face {
+    font-family: 'atomic_clock_radioregular';
+    src: url(fonts/atomicclockradio.eot);
+    src: url(fonts/atomicclockradio.eot?#iefix) format('embedded-opentype'),
+         url(fonts/atomicclockradio.woff) format('woff'),
+         url(fonts/atomicclockradio.ttf) format('truetype'),
+         url(fonts/atomicclockradio.svg#atomic_clock_radioregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+img {max-width:100%;}
+
+body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#000;}
+::-webkit-input-placeholder {font-size:13px; ;color:#999;text-align:center;letter-spacing:6px;}
+:-moz-placeholder {font-size:13px; ;color:#999;text-align:center;letter-spacing:6px;}
+::-moz-placeholder {font-size:13px; ;color:#999;text-align:center;letter-spacing:6px;}
+:-ms-input-placeholder {font-size:13px; ;color:#999;text-align:center;letter-spacing:6px;}
+
+.main-content{position: relative;width:100%;min-height:768px;padding-left:0;overflow:auto;}
+.navhead{position:absolute;height:100px;width:100%;}
+.thinhead li{display:inline;margin-left:60px;line-height:38px;width:100%;}
+.thinhead a{text-decoration:none;font-size:14px;color:#FFF}
+.thinhead{width:100%;height:38px;margin-top:37px;background-image:url(images/bgtrans.png);background-repeat:repeat;margin-left:0;}
+.headimg{position:absolute;margin-right:50px;right:35px;background-image:url(images/BMW-India.png);display:block;z-index:1000;width:215px;height:107px;}
+img.ajax-loader{position: absolute;top: 45%;left: 45%;display: none;}
+.logintext{font-size:12px !important;color:#FFF;line-height:12px;text-align:center;padding-right:14px;}
+
+
+.page1{width:100%;background-image:url(images/image-01.jpg);background-size:cover;overflow:auto;background-position:center;}
+.centercont{width:500px;margin:0 auto; ;font-size:26px;color:#FFF;margin-top:400px;line-height:72px;}
+.agebox{width:68px;height:68px;border-radius:70px;text-align:center;font-size:26px; border:none;box-shadow:3px 3px 0px #666 ;color:#999;float:left;outline:none;}
+#menu{float:left;width:120px;padding:11px;margin-top:-5px;margin-left:10px}
+.lab{float:left;text-align:center;}
+.soc{float:left;margin-left:5px;}
+
+.page2{width:100%;height:auto;overflow:auto;min-height:768px;}
+#player{width:100%;height:99%;}
+.hidecontrol{width:100%;height:115px;background-image:url(images/bgtrans.png) ;background-repeat:repeat;position:absolute;z-index:20;bottom:50px;overflow:auto;}
+.vidsec{margin-right:50px;font-size:26px;color:#FFF;margin-left:8%;margin-top:42px;float:left;width:25%;}
+.agenum{font-family:'atomic_clock_radioregular';font-size:4em;color:#FFF;line-height:75px;float:left;width:47%;margin-top:20px;}
+
+
+.page3{width:100%;background-image:url(images/image-01.jpg);background-size:cover;overflow:auto;background-position:center;min-height:768px;}
+.wishbox{width:800px;margin:0 auto; ;font-size:26px;color:#FFF;margin-top:400px;text-align:center;border:none;outline:none;}
+.wishtext{width:500px;height:72px;border-radius:13px;font-size:26px; border:none;box-shadow:3px 3px 0px #666 ;color:#999;margin-top:20px;text-align:center;padding-left:15px;padding-right:15px;outline: none}
+#postwish{cursor: pointer}
+
+
+.page4{width:100%;height:auto;background-image:url(images/image-04.jpg);background-size:cover;overflow:auto;min-height:768px;}
+ 
+
+
+
+.bigbucket2{max-width:497px;margin:0 auto;background:url(images/Bucket-01.png) no-repeat center ;margin-top:197px;  background-size:cover; height:407px;overflow:auto;}
+.smalltext{font-size:28px;color:#000;}
+.dynatext{font-size:28px;color:#333;text-transform:uppercase;width:300px;height:auto;word-wrap: break-word;line-height:34px;}
+.customtext{margin-top:10px;margin-left:90px;line-height:44px;width:400px;}
+.personalbucket{height:auto;}
+.share{color:#FFF;font-size:12px;letter-spacing:6px;text-align:center;margin-top:10px;}
+.nextscroll{width:52px;height:52px;margin:0 auto;margin-top:10px;}
+.profileimg{width:70px;height:70px;background:#096;margin-top:159px;margin-left:90px;}
+
+
+.timertext{color:#FFF;font-size:12px;text-align:center;letter-spacing:1px;}
+.countdown{opacity:0.4;right:100px;bottom:100px;position:absolute;}
+.smalltimer{font-size:3.4em;font-family:'atomic_clock_radioregular';text-align:center;line-height:70px;color:#FFF;margin-top:20px;}
+
+
+.page5{width:100%;height:auto;background-image:url(images/image-05.jpg);background-size:cover;overflow:auto;min-height:768px;}
+.socialbucket{width:552px;height:452px;margin:0 auto;margin-top:200px;border:none;}
+.socialend{text-align:center;width:675px;margin:0 auto;color:#FFF;font-size:15px;font-weight:lighter;margin-top:50px;line-height:26px;}
+.demo-1{display:none;}
+#share-button{width: 104px;margin: 0 auto;display: block;}
+

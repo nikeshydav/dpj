@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Don't Postpone Joy</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" type="text/css" href="default.css" />
+<link rel="stylesheet" type="text/css" href="component.css" />
+<link rel="icon" href="images/favicon.png">
+<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+<div class='main-content'>
+  <div class="navhead">
+    <div class="headimg"></div>
+    <!--mobiledropdown-->
+    <div class="container demo-1">
+      <div class="column">
+        <div id="dl-menu" class="dl-menuwrapper">
+          <button class="dl-trigger">Open Menu</button>
+          <ul class="dl-menu">
+            <li> <a href="index.html">HOME</a> </li>
+            <li> <a href="http://www.bmw.in">BMW.IN</a> </li>
+            <li> <a href="http://www.bmw.in/in/en/general/ecom_uic/dlo/dealer_locator.html">SELECT YOUR DEALER</a> </li>
+            <!--<li>
+                                        <a href="#">SELECT YOUR BMW</a>                                        
+                                </li>-->
+          </ul>
+        </div>
+        <!-- /dl-menuwrapper --> 
+      </div>
+    </div>
+    <!-- /container --> 
+    <!--mobileropdown-->
+    <div class="thinhead">
+      <ul class="mymenu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="http://www.bmw.in" target="_blank">BMW.IN</a></li>
+        <li><a href="http://www.bmw.in/in/en/general/ecom_uic/dlo/dealer_locator.html" target="_blank">SELECT YOUR DEALER</a></li>
+        <!-- <li><a href="select-ur-dealer.html">SELECT YOUR BMW</a></li> -->
+      </ul>
+    </div>
+  </div>
+  <!--navhead-->
+  
+  <div id="main-content" class="page1" > <img class="ajax-loader" src="ajax-loader.gif" alt="loading..." />
+    <div class="centercont">
+      <div class="lab">ENTER YOUR AGE &nbsp;</div>
+      <input type="text" class="agebox" name="agebox" id="agebox" maxlength="2"/>
+      <div id="menu">
+        <div class="logintext">LOGIN</div>
+        <a href="javascript:void(0)" id="fb" ><img src="images/sf-01.png" class="soc"/></a> <a href="javascript:void(0)" class="men" id="tw" ><img src="images/sf-02.png" class="soc"/></a> </div>
+      <!--sociallogin--> 
+    </div>
+    <!--centercont--> 
+  </div>
+  <!--page1--> 
+</div>
+<!--maincont--> 
+<a href="1.php" class="men" id="page1" ></a>
+<div id="fb-root"></div>
+<script src="js/jquery.min.js" ></script>
+<script>
+                        window.fbAsyncInit = function() {
+                            FB.init({
+                                appId: '611410122306210',
+                                xfbml: true,
+                                version: 'v2.0'
+                            });
+                        };
+
+                        (function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) {
+                                return;
+                            }
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "//connect.facebook.net/en_US/sdk.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+        </script> 
+<script src="js/jquery.fitvids.js"></script> 
+<script src="js/jquery.dlmenu.js"></script> 
+<script src="app.js"></script>
+</body>
+</html>

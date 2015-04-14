@@ -1,0 +1,25 @@
+body, input, textarea, select {
+	font-size: 17pt;
+}
+/* Main */
+		
+.main {
+}
+.main.style2 {
+}
+.main.style2 .content {
+	width: 60%; margin:0px auto;
+}
+
+.content_buck {max-width: 497px; margin:0px auto; text-align:center;}
+
+.main.style2.right .content {
+	left: 60%;margin:0px auto; text-align:center;
+}
+.main.style2.inactive {
+}
+.main.style2.inactive .content {
+}
+.main.style2.inactive.left .content {
+	left: -40%; 
+}

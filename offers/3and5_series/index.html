@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>BMW India</title>
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <link rel="stylesheet" href="css/reset.css" type="text/css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <style>
+            #bmw_salutation{height: 26px ;margin-top: -8px;;padding-left: 10px}
+        </style>
+        <!--[if lte IE 7]> <style>#bmw_salutation{height: 26px;margin-top:0px;}</style> <![endif]-->
+        <!--[if IE 8]>     <style>#bmw_salutation{height: 26px;margin-top: -8px;} </style> <![endif]-->
+        <!--[if IE 9]>     <style>#bmw_salutation{height: 26px;margin-top: -8px;} </style> <![endif]-->
+        <!--
+        7549146104
+        -->
+    </head>
+    <body>
+        <div class="warper">
+            <div class="outer">
+                <div class="logo"><img src="images/logo.png" ></div>
+                <div class="top"></div>
+                <div class="inner">
+                    <div class="form_outer">
+                        <div class="header_title"><img src="images/join_the_legency.png"></div>
+                        <div class="book_a_test_drive">BOOK A test drive today.</div>
+
+                        <form action="http://teambmw.in/3_5series_lp/Default.aspx" method="post" id="form" >
+                            <div id="error" style="display: none"></div>
+                            <select  class="title select_vali ui-selectmenu-button ui-widget ui-state-default ui-corner-all" name="bmw_salutation" id="bmw_salutation" required>                          
+                                <option value="" selected >Title* </option>
+                                <option value="2CE544DC-B748-E111-B8E1-005056820025">Dr.</option>
+                                <option value="2EE544DC-B748-E111-B8E1-005056820025">Mr.</option>
+                                <option value="30E544DC-B748-E111-B8E1-005056820025">Mrs.</option>
+                                <option value="32E544DC-B748-E111-B8E1-005056820025">Ms.</option>
+                            </select>
+                            <input type="text" name="bmw_firstname" class="first_name text" placeholder="First Name*" required>
+                            <input type="text" name="bmw_lastname" class="field textonly text" placeholder="Last Name*" required>
+                            <br>
+                            <select  class="textonly_2 select_vali ui-selectmenu-button ui-widget ui-state-default ui-corner-all" style="height: 26px;padding-left: 10px" name="bmw_model" id="bmw_model" required>                
+                                <option value="" selected >My Preferred BMW Model* </option>
+                                <option value="2B027CC5-564D-E111-957C-005056820025">BMW 5 Series</option>
+                                <option value="29027CC5-564D-E111-957C-005056820025">BMW 3 Series</option>
+                            </select>
+                            <br>
+                            <input type="tel" id="bmw_mobile1" maxlength="10" name="bmw_mobile1" class="field textonly" placeholder="Mobile No.*" required />
+                            <br>
+                            <input type="email" name="bmw_email" class="field textonly emailid" placeholder="Email ID*" required><br>
+                            <input id="dataUsageAgreement" name="dataUsageAgreement" type="checkbox" value="true" required aria-required="true" /> <label class="lab_tnc">Accept the data usage agreement. <a href="#" id="tnc">Terms of use</a> </label>
+                            <br><input class="submit" type="image" src="images/book_now.jpg" alt="Book now" />
+                            <input type="hidden" name="bmw_leadsource" id="lead" />
+                        </form>                        
+                    </div>
+                    <div class="header"><img src="images/header.jpg" ></div>
+                </div>
+
+                <div id="terms" class="terms" >
+                    <div style="position: absolute; left: 245px; top: 5px;"> <a href="#" id="clog">X</a> </div>
+                    <div  class="copy" style="color: #000;">
+                        <div class="headline2">For Your Information.</div>
+                        By providing the aforesaid information, you hereby unconditionally consent to being contacted by BMW India Financial Services Private Limited and/or any of its group companies and/or their employees/agents (hereinafter collectively referred to as "BMW") either through phone, SMS, written communication, email or any other legal means, from time to time. Further, this information shall be treated as your free consent and authorization to BMW to establish contract. You agree and confirm that submission of the information shall override the effect of any subscription made by you, either in the past or in the future, with the applicable National Do Not Call (NDNC) registries. Please note that you can retract your consent at any time by accessing our unsubscribe form. In this regard you acknowledge that processing of such a request may take upto ten business days. BMW ensures that all personal data will be dealt with in accordance with privacy protection regulations.
+                    </div>
+                </div>
+
+                <div class="bottom">                    
+                    <div class="clearfix"></div>
+                    <div class="footer">*Finance is at the sole discretion of BMW India Financial Services. Offer is valid for limited period and is subject to change without any prior notice. All offers are from Dealership. The model, equipment & possible vehicle configurations illustrated in the communication may differ from the vehicles supplied in the Indian market.</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script src="js/jquery.mockjax.js"></script>
+        <script src="js/jquery.form.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/jquery.placeholder.js"></script>
+        <!-- <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
+        <script>
+            $(function () {
+
+                $('#bmw_mobile1').keyup(function () {
+                    $(this).val(function (index, oldVal) {
+                        return oldVal.replace(/[^\d]/g, '');
+                    });
+                });
+
+                $('.text').keyup(function () {
+                    $(this).val(function (index, oldVal) {
+                        return oldVal.replace(/[^[a-zA-Z ]*$/, '');
+                    });
+                });
+
+
+
+                /*$.mockjax({
+                 url: $("#form").attr('action'),
+                 response: function (settings) {
+                 this.responseText = "<p>Thank you for your interest in BMW.<br /> Your request has been submitted. We will contact you at the earliest.</p>";
+                 },
+                 responseStatus: 200,
+                 responseTime: 500
+                 });
+                 
+                 // show a simple loading indicator
+                 var loader = jQuery('<div id="loader"><img src="images/loading.gif" alt="loading..."></div>')
+                 .css({
+                 position: "relative",
+                 top: "1em",
+                 left: "25em",
+                 display: "inline"
+                 })
+                 .appendTo("body")
+                 .hide();
+                 
+                 $().ajaxStart(function () {
+                 loader.show();
+                 }).ajaxStop(function () {
+                 loader.hide();
+                 }).ajaxError(function (a, b, e) {
+                 throw e;
+                 });
+                 
+                 
+                 var v = $("#form").validate({
+                 errorLabelContainer: $('#error'),
+                 submitHandler: function (form) {
+                 jQuery(form).ajaxSubmit({
+                 target: "#form"
+                 });
+                 }
+                 });*/
+
+                $("#form").validate({
+                    errorLabelContainer: $('#error'),
+                    rules: {
+                        bmw_mobile1: {
+                            required: true,
+                            minlength: 10
+                        }
+                    },
+                    submitHandler: function () {
+                        $('#form').ajaxSubmit(function (d) {
+                            //$('#commentForm1').html(d);
+                        });
+                        $('.book_a_test_drive').hide();
+                        $('#form').html('<p>Thank you for your interest in BMW.<br>Your request has been submitted. We will contact you at the earliest.</p>');
+                    }
+                });
+
+                $("#reset").click(function () {
+                    v.resetForm();
+                });
+
+                //$("#bmw_salutation").selectmenu();
+
+                //$("#bmw_model").selectmenu();
+
+                $('#tnc').click(function () {
+                    $('#terms').show();
+                });
+
+                $('#clog').click(function () {
+                    $('#terms').hide();
+                });
+                $('input, textarea').placeholder();
+
+
+            });
+
+            $(window).load(function () {
+
+                $url = document.referrer;
+                function getParameterByName(name) {
+                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                            results = regex.exec(location.search);
+                    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+
+                if ($('#lead').val() == '') {
+                    $('#lead').val(getParameterByName('bmw_leadsource'));
+                }
+            });
+        </script>
+        
+        
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54754167-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        
+    </body>
+</html>
